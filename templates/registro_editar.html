@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<aside>
+   <div class="container">
+
+<h3>
+   <CENTER> <b> registro </b> </CENTER>
+
+</h3>
+
+  <br>
+<form class="row g-3"  action="/registro_fedita/{{dat.0}}" method="post">
+   <div class="col-md-4">
+      <label for="nombre" class="form-label">nombre</label>
+      <input type="text" class="form-control" name="nombre" id="nombre" value="{{dat.1}}"></input>
+   </div>
+
+   <div class="col-md-4">
+    <label for="correo" class="form-label">correo</label>
+    <input type="text" class="form-control" name="correo" id="correo" value="{{dat.2}}"></input>
+ </div>
+
+ <div class="col-md-4">
+    <label for="telefono" class="form-label">telefono</label>
+    <input type="text" class="form-control" name="telefono" id="telefono" value="{{dat.3}}"></input>
+ </div>
+
+ <div class="col-md-12">
+    <label for="problema" class="form-label">problema</label>
+    <input type="text" class="form-control" name="problema" id="problema" value="{{dat.4}}"></input>
+ </div>
+
+ <div class="col-md-6">
+    <label for="direccion" class="form-label">direccion</label>
+    <input type="text" class="form-control" name="direccion" id="direccion" value="{{dat.5}}"></input>
+ </div>
+ <div class="col-md-4">
+    <label for="fecha" class="form-label">fecha</label>
+    <input type="date" class="form-control" name="fecha" id="fecha" value="{{dat.6}}"></input>
+ </div>
+
+
+   <div class="col-md-12">
+          <button type="submit" class="btn btn-danger">Enviar</button>
+    </div>
+</form>
+</aside>
+{% endblock %}
